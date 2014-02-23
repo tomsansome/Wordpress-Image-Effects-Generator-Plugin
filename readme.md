@@ -6,4 +6,6 @@
 - Negative
 - Sharpened
 
+##### Demo / Instructions: [dev.twoblok.es/wp-image-effect-generator](http://dev.twoblok.es/wp-image-effect-generator)
+
 ♥ Two Blokes
