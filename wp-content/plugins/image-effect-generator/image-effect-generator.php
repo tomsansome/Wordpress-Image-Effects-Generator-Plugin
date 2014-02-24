@@ -1,6 +1,6 @@
 <?php
   /*
-    Plugin Name: Wordpress Image Effect Generator
+    Plugin Name: Image Effects Generator
     Plugin URI: http://dev.twoblok.es/wp-image-effect-generator
     Description: A plugin that gives you more than 3 image sizes.
     Version: 1.0

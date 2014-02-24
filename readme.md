@@ -1,3 +1,6 @@
+# THIS IS NOT FINISHED, DO NOT USE YET :)
+
+
 # Image Effects Generator
 ### Wordpress plugin that will generate the following image effects:
 

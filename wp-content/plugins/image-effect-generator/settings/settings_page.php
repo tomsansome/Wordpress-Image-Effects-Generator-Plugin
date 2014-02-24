@@ -8,8 +8,10 @@ function image_effects_create_menu() {
 
 function register_mysettings() {
   register_setting( 'image-effects-settings-group', 'black_and_white' );
-  register_setting( 'image-effects-settings-group', 'some_other_option' );
-  register_setting( 'image-effects-settings-group', 'option_etc' );
+  register_setting( 'image-effects-settings-group', 'negative' );
+  register_setting( 'image-effects-settings-group', 'blurred' );
+  register_setting( 'image-effects-settings-group', 'sharpened' );
+  register_setting( 'image-effects-settings-group', 'sepia' );
 }
 
 function image_effects_settings_page() {

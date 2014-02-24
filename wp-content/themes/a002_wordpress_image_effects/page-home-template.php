@@ -8,12 +8,43 @@
 
     <section>
 
-      <?php if(get_field('images')): ?>
-        <?php while(the_repeater_field('images')): ?>
-          <?php $image = wp_get_attachment_image_src(get_sub_field('image'), 'image-effects-1000-bw'); ?>
-            <img src="<?php echo $image[0]; ?>" alt="<?php the_sub_field('link_title');?>"/>
-          <?php endwhile; ?>
-      <?php endif; ?>
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-1000-sepia'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-800-sepia'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-400-sepia'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-1000-sharpened'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-800-sharpened'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-400-sharpened'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-1000-bw'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-800-bw'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-400-bw'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-1000-blurred'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-800-blurred'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-400-blurred'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-1000-negative'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-800-negative'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-400-negative'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+
+
+
 
     </section>
 

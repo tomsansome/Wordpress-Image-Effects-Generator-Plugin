@@ -1,43 +1,54 @@
 <?php
 
-  $my_options = get_option('black_and_white');
+  $my_options_bw = get_option('black_and_white');
+  if ( $my_options_bw === yes_please ) {
 
-  if ( $my_options === yes_please ) {
+    add_image_size( 'image-effects-1000-bw', 1000, 1000, false );
+    add_image_size( 'image-effects-800-bw', 800, 800, false );
+    add_image_size( 'image-effects-400-bw', 400, 400, false );
 
-    // 1000px - black & white - add size
-    function image_effects_1000_bw_sizing() {
-      add_image_size('image-effects-1000-bw', 1000, 1000, false);
-    }
-    add_action('after_setup_theme', 'image_effects_1000_bw_sizing');
- 
-    // 1000px - black & white - show size in Media Upload
-    function image_effects_show_sizes($sizes) {
-      $sizes['image-effects-1000-bw'] = __( '1000 Black White', 'test' );
-      return $sizes;
-    }
-    add_filter('image_size_names_choose', 'image_effects_show_sizes');
-
-    // 1000px - black & white - black and white filter
-    function image_effects_1000_bw_effect($meta) {
-      $file = wp_upload_dir();
-      $file = trailingslashit($file['path']).$meta['sizes']['image-effects-1000-bw']['file'];
-      list($orig_w, $orig_h, $orig_type) = @getimagesize($file);
-      $image = wp_load_image($file);
-      imagefilter($image, IMG_FILTER_GRAYSCALE);
-      switch ($orig_type) {
-        case IMAGETYPE_GIF:
-          imagegif( $image, $file );
-          break;
-        case IMAGETYPE_PNG:
-          imagepng( $image, $file );
-          break;
-        case IMAGETYPE_JPEG:
-          imagejpeg( $image, $file );
-          break;
-      }
+    add_filter('wp_generate_attachment_metadata', 'image_effects_bw_filter');
+    function image_effects_bw_filter($meta) {
+      $file = $meta['sizes']['image-effects-1000-bw']['file'];
+      $meta['sizes']['image-effects-1000-bw']['file'] = do_bw_filter($file);
+      $file = $meta['sizes']['image-effects-800-bw']['file'];
+      $meta['sizes']['image-effects-800-bw']['file'] = do_bw_filter($file);
+      $file = $meta['sizes']['image-effects-400-bw']['file'];
+      $meta['sizes']['image-effects-400-bw']['file'] = do_bw_filter($file);
       return $meta;
     }
-    add_filter('wp_generate_attachment_metadata', 'image_effects_1000_bw_effect');
+
+    function do_bw_filter($file) {
+      $dir = wp_upload_dir();
+      $image = wp_load_image(trailingslashit($dir['path']).$file);
+      imagefilter($image, IMG_FILTER_GRAYSCALE);
+      return save_modified_image_bw($image, $file, '-bw');
+    }
+
+    function save_modified_image_bw($image, $filename, $suffix) {
+    $dir = wp_upload_dir();
+    $dest = trailingslashit($dir['path']).$filename;
+
+    list($orig_w, $orig_h, $orig_type) = @getimagesize($dest);
+
+    $filename = str_ireplace(array('.jpg', '.jpeg', '.gif', '.png'), array($suffix.'.jpg', $suffix.'.jpeg', $suffix.'.gif', $suffix.'.png'), $filename);
+    $dest = trailingslashit($dir['path']).$filename;
+
+    switch ($orig_type) {
+        case IMAGETYPE_GIF:
+            imagegif( $image, $dest );
+            break;
+        case IMAGETYPE_PNG:
+            imagepng( $image, $dest );
+            break;
+        case IMAGETYPE_JPEG:
+            imagejpeg( $image, $dest );
+            break;
+    }
+
+    return $filename;
+    }
+
   }
 
 ?>
