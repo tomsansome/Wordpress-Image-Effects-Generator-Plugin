@@ -12,6 +12,7 @@ function register_mysettings() {
   register_setting( 'image-effects-settings-group', 'blurred' );
   register_setting( 'image-effects-settings-group', 'sharpened' );
   register_setting( 'image-effects-settings-group', 'sepia' );
+  register_setting( 'image-effects-settings-group', 'pixelate' );
 }
 
 function image_effects_settings_page() {

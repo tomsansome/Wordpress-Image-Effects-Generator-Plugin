@@ -5,9 +5,9 @@
   include('filters/black_and_white.php');
   include('filters/negative.php');
   include('filters/blurred.php');
-  include('filters/sharpened.php');
+  include('filters/sharpen.php');
   include('filters/sepia.php');
-  // include('filters/colorize.php');
+  include('filters/pixelate.php');
 
   include('show_sizes.php');
 

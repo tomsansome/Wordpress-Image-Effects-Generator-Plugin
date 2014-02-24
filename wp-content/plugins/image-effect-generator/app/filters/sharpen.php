@@ -21,7 +21,13 @@
     function do_sharpened_filter($file) {
       $dir = wp_upload_dir();
       $image = wp_load_image(trailingslashit($dir['path']).$file);
-      imagefilter($image, IMG_FILTER_SMOOTH, -9);
+      $sharpen = array(
+        array(-1.2, -1, -1.2), 
+        array(-1, 20, -1), 
+        array(-1.2, -1, -1.2)
+      );
+      $divisor = array_sum(array_map('array_sum', $sharpen));
+      imageconvolution($image, $sharpen, $divisor, 0);
       return save_modified_image_sharpened($image, $file, '-sharpened');
     }
 

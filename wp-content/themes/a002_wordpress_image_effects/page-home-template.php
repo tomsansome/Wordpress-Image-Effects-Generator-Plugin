@@ -8,6 +8,13 @@
 
     <section>
 
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-1000-pixelate'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-800-pixelate'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+      <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-400-pixelate'); ?>
+      <img src="<?php echo $image[0]; ?>"/>
+
       <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-1000-sepia'); ?>
       <img src="<?php echo $image[0]; ?>"/>
       <?php $image = wp_get_attachment_image_src(get_field('image'), 'image-effects-800-sepia'); ?>

@@ -36,6 +36,12 @@
         <td><input type="checkbox" name="sepia" <?php if ($my_options == 'yes_please') echo "checked='checked'"; ?> value="yes_please"></td>
         </tr>
 
+        <tr valign="top">
+        <th scope="row">Pixelate (13px)</th>
+        <?php $my_options = get_option('pixelate'); ?>
+        <td><input type="checkbox" name="pixelate" <?php if ($my_options == 'yes_please') echo "checked='checked'"; ?> value="yes_please"></td>
+        </tr>
+
         <!-- <tr valign="top">
         <th scope="row">Colorized</th>
         <?php $my_options = get_option('colorized'); ?>
