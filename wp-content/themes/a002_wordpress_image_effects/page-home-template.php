@@ -21,6 +21,9 @@
   <section id="section" class="usage">
     <h2>Usage</h2>
       <p>These new effects and sizes become available inside the <strong>Add Media</strong> area for posts and pages ~ <a href="http://cl.ly/U7uk" target="_blank">Image Reference</a></p>
+  </section>
+
+  <section id="section" class="usage">
     <h2>Usage in template</h2>
       <ul>
         <li>All effects generated at 1000x1000, 800x800 and 400x400 (no crop) by default</li>
@@ -139,15 +142,9 @@
 
   </section>
 
-  <section id="section" class="settings">
-    <h2>Options</h2>
-    <p>All of these image effects are optional:</p>
-    
-  </section>
-
   <section id="section" class="notes">
     <h2>Notes</h2>
-    <p>We are not PHP developers. This is something we wanted to use, and decided to put out there with the idea that we would learn-as-we-go. Please ask questions on our <a href="http://wordpress.org/plugins/image-effects-generator/">Wordpress plugins page.</a></p>
+    <p>We are not PHP developers. This is something we wanted to have for ourselves, and decided to put out there with the idea that we would learn-as-we-go. Please ask questions / get angry with us on our <a href="http://wordpress.org/plugins/image-effects-generator/">Wordpress plugins page.</a></p>
   </section>
 
   <section id="section" class="plug">
