@@ -2,8 +2,8 @@
   /*
     Plugin Name: Image Effects Generator
     Plugin URI: http://dev.twoblok.es/wp-image-effect-generator
-    Description: A plugin that gives you more than 3 image sizes.
-    Version: 1.0
+    Description: A plugin that generates selected image effects on upload.
+    Version: 1.0.1
     Author: Two Blokes
     Author URI: http://twoblok.es
     License: GPL2

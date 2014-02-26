@@ -11,12 +11,6 @@
         <?php $my_options = get_option('black_and_white'); ?>
         <td><input type="checkbox" name="black_and_white" <?php if ($my_options == 'yes_please') echo "checked='checked'"; ?> value="yes_please"></td>
         </tr>
-         
-        <tr valign="top">
-        <th scope="row">Negative</th>
-        <?php $my_options = get_option('negative'); ?>
-        <td><input type="checkbox" name="negative" <?php if ($my_options == 'yes_please') echo "checked='checked'"; ?> value="yes_please"></td>
-        </tr>
 
         <tr valign="top">
         <th scope="row">Blurred</th>
@@ -41,14 +35,13 @@
         <?php $my_options = get_option('pixelate'); ?>
         <td><input type="checkbox" name="pixelate" <?php if ($my_options == 'yes_please') echo "checked='checked'"; ?> value="yes_please"></td>
         </tr>
+         
+        <tr valign="top">
+        <th scope="row">Negative</th>
+        <?php $my_options = get_option('negative'); ?>
+        <td><input type="checkbox" name="negative" <?php if ($my_options == 'yes_please') echo "checked='checked'"; ?> value="yes_please"></td>
+        </tr>
 
-        <!-- <tr valign="top">
-        <th scope="row">Colorized</th>
-        <?php $my_options = get_option('colorized'); ?>
-        <td><input type="checkbox" name="colorized" <?php if ($my_options == 'yes_please') echo "checked='checked'"; ?> value="yes_please"></td>
-        <td><input type="text" name="colorized_amount" placeholder="r,g,b" <?php if ($my_options == 'yes_please') echo "checked='checked'"; ?> value="<?php echo get_option('colorized_amount'); ?>"></td>
-        </tr> -->
-        
     </table>
     
     <?php submit_button(); ?>

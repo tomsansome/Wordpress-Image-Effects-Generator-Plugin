@@ -8,11 +8,11 @@ function image_effects_create_menu() {
 
 function register_mysettings() {
   register_setting( 'image-effects-settings-group', 'black_and_white' );
-  register_setting( 'image-effects-settings-group', 'negative' );
   register_setting( 'image-effects-settings-group', 'blurred' );
   register_setting( 'image-effects-settings-group', 'sharpened' );
   register_setting( 'image-effects-settings-group', 'sepia' );
   register_setting( 'image-effects-settings-group', 'pixelate' );
+  register_setting( 'image-effects-settings-group', 'negative' );
 }
 
 function image_effects_settings_page() {
