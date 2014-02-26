@@ -8,6 +8,6 @@
 - Pixelate
 - Negative
 
-##### Demo / Instructions: [dev.twoblok.es/wp-image-effect-generator](http://dev.twoblok.es/wp-image-effect-generator)
+##### Demo / Instructions: [dev.twoblok.es/wp-image-effect](http://dev.twoblok.es/wp-image-effect)
 
 ♥ Two Blokes
